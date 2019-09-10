@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/BalanceWS" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/BalanceWS" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/BalanceWS" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="WSAddPalletToQue">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCC" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSAddPalletToQue_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSCreateSSCCDataFile">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="WSCreateSSCCDataFile_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSReturnParam">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="iP" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="port" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="timeOut" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="scanCh" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="wrapCh" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="palletReadyCh" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="labelSendCh" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="palletFinished" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="doSignalTimer" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="diSignalTimer" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="eidosPrintIp" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="eidosPrintPort" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newPalletNoIs" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="sSCCLabelPath" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sSCCLabelName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="deleteFile" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="doWrapOnly" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSReturnParam_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="iP" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="port" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="timeOut" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="scanCh" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="wrapCh" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="palletReadyCh" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="labelSendCh" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="palletFinished" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="doSignalTimer" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="diSignalTimer" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="eidosPrintIp" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="eidosPrintPort" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newPalletNoIs" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="sSCCLabelPath" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sSCCLabelName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="deleteFile" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="doWrapOnly" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSNewPalletExist">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="nummer" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSNewPalletExist_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSRenameNewPallet">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="nummer" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSRenameNewPallet_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSRemovePallet">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="WSRemovePallet_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSMoveQueForward">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="WSMoveQueForward_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSIsDummyPallet">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="WSIsDummyPallet_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSReturnServiceParam">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="navServer" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="navDomUserName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="navDomUserPass" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="navServiceName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="navServiceIsLocal" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WSReturnServiceParam_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="navServer" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="navDomUserName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="navDomUserPass" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="navServiceName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="navServiceIsLocal" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="WSAddPalletToQue">
+    <part name="parameters" element="tns:WSAddPalletToQue" />
+  </message>
+  <message name="WSAddPalletToQue_Result">
+    <part name="parameters" element="tns:WSAddPalletToQue_Result" />
+  </message>
+  <message name="WSCreateSSCCDataFile">
+    <part name="parameters" element="tns:WSCreateSSCCDataFile" />
+  </message>
+  <message name="WSCreateSSCCDataFile_Result">
+    <part name="parameters" element="tns:WSCreateSSCCDataFile_Result" />
+  </message>
+  <message name="WSReturnParam">
+    <part name="parameters" element="tns:WSReturnParam" />
+  </message>
+  <message name="WSReturnParam_Result">
+    <part name="parameters" element="tns:WSReturnParam_Result" />
+  </message>
+  <message name="WSNewPalletExist">
+    <part name="parameters" element="tns:WSNewPalletExist" />
+  </message>
+  <message name="WSNewPalletExist_Result">
+    <part name="parameters" element="tns:WSNewPalletExist_Result" />
+  </message>
+  <message name="WSRenameNewPallet">
+    <part name="parameters" element="tns:WSRenameNewPallet" />
+  </message>
+  <message name="WSRenameNewPallet_Result">
+    <part name="parameters" element="tns:WSRenameNewPallet_Result" />
+  </message>
+  <message name="WSRemovePallet">
+    <part name="parameters" element="tns:WSRemovePallet" />
+  </message>
+  <message name="WSRemovePallet_Result">
+    <part name="parameters" element="tns:WSRemovePallet_Result" />
+  </message>
+  <message name="WSMoveQueForward">
+    <part name="parameters" element="tns:WSMoveQueForward" />
+  </message>
+  <message name="WSMoveQueForward_Result">
+    <part name="parameters" element="tns:WSMoveQueForward_Result" />
+  </message>
+  <message name="WSIsDummyPallet">
+    <part name="parameters" element="tns:WSIsDummyPallet" />
+  </message>
+  <message name="WSIsDummyPallet_Result">
+    <part name="parameters" element="tns:WSIsDummyPallet_Result" />
+  </message>
+  <message name="WSReturnServiceParam">
+    <part name="parameters" element="tns:WSReturnServiceParam" />
+  </message>
+  <message name="WSReturnServiceParam_Result">
+    <part name="parameters" element="tns:WSReturnServiceParam_Result" />
+  </message>
+  <portType name="BalanceWS_Port">
+    <operation name="WSAddPalletToQue">
+      <input name="WSAddPalletToQue" message="tns:WSAddPalletToQue" />
+      <output name="WSAddPalletToQue_Result" message="tns:WSAddPalletToQue_Result" />
+    </operation>
+    <operation name="WSCreateSSCCDataFile">
+      <input name="WSCreateSSCCDataFile" message="tns:WSCreateSSCCDataFile" />
+      <output name="WSCreateSSCCDataFile_Result" message="tns:WSCreateSSCCDataFile_Result" />
+    </operation>
+    <operation name="WSReturnParam">
+      <input name="WSReturnParam" message="tns:WSReturnParam" />
+      <output name="WSReturnParam_Result" message="tns:WSReturnParam_Result" />
+    </operation>
+    <operation name="WSNewPalletExist">
+      <input name="WSNewPalletExist" message="tns:WSNewPalletExist" />
+      <output name="WSNewPalletExist_Result" message="tns:WSNewPalletExist_Result" />
+    </operation>
+    <operation name="WSRenameNewPallet">
+      <input name="WSRenameNewPallet" message="tns:WSRenameNewPallet" />
+      <output name="WSRenameNewPallet_Result" message="tns:WSRenameNewPallet_Result" />
+    </operation>
+    <operation name="WSRemovePallet">
+      <input name="WSRemovePallet" message="tns:WSRemovePallet" />
+      <output name="WSRemovePallet_Result" message="tns:WSRemovePallet_Result" />
+    </operation>
+    <operation name="WSMoveQueForward">
+      <input name="WSMoveQueForward" message="tns:WSMoveQueForward" />
+      <output name="WSMoveQueForward_Result" message="tns:WSMoveQueForward_Result" />
+    </operation>
+    <operation name="WSIsDummyPallet">
+      <input name="WSIsDummyPallet" message="tns:WSIsDummyPallet" />
+      <output name="WSIsDummyPallet_Result" message="tns:WSIsDummyPallet_Result" />
+    </operation>
+    <operation name="WSReturnServiceParam">
+      <input name="WSReturnServiceParam" message="tns:WSReturnServiceParam" />
+      <output name="WSReturnServiceParam_Result" message="tns:WSReturnServiceParam_Result" />
+    </operation>
+  </portType>
+  <binding name="BalanceWS_Binding" type="tns:BalanceWS_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="WSAddPalletToQue">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/BalanceWS:WSAddPalletToQue" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WSAddPalletToQue">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WSAddPalletToQue_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="WSCreateSSCCDataFile">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/BalanceWS:WSCreateSSCCDataFile" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WSCreateSSCCDataFile">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WSCreateSSCCDataFile_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="WSReturnParam">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/BalanceWS:WSReturnParam" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WSReturnParam">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WSReturnParam_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="WSNewPalletExist">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/BalanceWS:WSNewPalletExist" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WSNewPalletExist">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WSNewPalletExist_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="WSRenameNewPallet">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/BalanceWS:WSRenameNewPallet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WSRenameNewPallet">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WSRenameNewPallet_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="WSRemovePallet">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/BalanceWS:WSRemovePallet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WSRemovePallet">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WSRemovePallet_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="WSMoveQueForward">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/BalanceWS:WSMoveQueForward" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WSMoveQueForward">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WSMoveQueForward_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="WSIsDummyPallet">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/BalanceWS:WSIsDummyPallet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WSIsDummyPallet">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WSIsDummyPallet_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="WSReturnServiceParam">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/BalanceWS:WSReturnServiceParam" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WSReturnServiceParam">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WSReturnServiceParam_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="BalanceWS">
+    <port name="BalanceWS_Port" binding="tns:BalanceWS_Binding">
+      <address location="http://nav60test.dkmalt.local:7047/DynamicsNAV/WS/ReplaceWithAPercentEncodedCompanyName/Codeunit/BalanceWS" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>
